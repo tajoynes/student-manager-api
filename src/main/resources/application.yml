@@ -1,0 +1,47 @@
+server:
+  port: 8082
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles:
+    active:
+      on-profile: dev
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: $9Danielle
+    url: jdbc:postgresql://localhost:5432/manageapi
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+---
+spring:
+  profiles:
+    active:
+      on-profile: stage
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: $9Danielle
+    url: jdbc:postgresql://localhost:5432/manageapi
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+---
+spring:
+  profiles:
+    active:
+      on-profile: prod
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: $9Danielle
+    url: jdbc:postgresql://localhost:5432/manageapi
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
