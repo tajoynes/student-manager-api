@@ -10,7 +10,7 @@ spring:
       on-profile: dev
   datasource:
     driver-class-name: org.postgresql.Driver
-    password: $9Danielle
+    password: {dbpassword}
     url: jdbc:postgresql://localhost:5432/manageapi
     username: postgres
   jpa:
@@ -24,7 +24,7 @@ spring:
       on-profile: stage
   datasource:
     driver-class-name: org.postgresql.Driver
-    password: $9Danielle
+    password: {dbpassword}
     url: jdbc:postgresql://localhost:5432/manageapi
     username: postgres
   jpa:
@@ -38,7 +38,7 @@ spring:
       on-profile: prod
   datasource:
     driver-class-name: org.postgresql.Driver
-    password: $9Danielle
+    password: {dbpassword}
     url: jdbc:postgresql://localhost:5432/manageapi
     username: postgres
   jpa:
